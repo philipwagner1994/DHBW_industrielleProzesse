@@ -1,1 +1,4 @@
 projekt1/.idea/
+projekt2/.idea/
+*.name
+projekt2/projekt1.iml

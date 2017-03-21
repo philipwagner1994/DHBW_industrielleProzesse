@@ -39,7 +39,6 @@ public class ProblemSet {
 	public static final double LOC_X17_HIGH = 1;
 	public static final double VEL_LOW = -1;
 	public static final double VEL_HIGH = 1;
-	public String message;
 	public static final double ERR_TOLERANCE = 1E-20; // the smaller the tolerance, the more accurate the result, 
 	                                                  // but the number of iteration is increased
 	private final static String QUEUE_NAME = "Inbound";
