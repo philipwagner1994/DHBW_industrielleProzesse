@@ -24,8 +24,8 @@ public class ReceiveLogs {
             public void handleDelivery(String consumerTag, Envelope envelope,
                                        AMQP.BasicProperties properties, byte[] body) throws IOException {
                 message = new String(body, "UTF-8");
-                System.out.println(" [x] Received '" + message + "'");
-                System.out.println(message.split(":")[3].split(",")[0]);
+               // System.out.println(" [x] Received '" + message + "'");
+               // System.out.println(message.split(":")[3].split(",")[0]);
                 
             }
         };

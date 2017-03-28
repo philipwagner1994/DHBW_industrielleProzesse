@@ -1,3 +1,7 @@
+//import com.rabbitmq.client.Channel;
+//import com.rabbitmq.client.Connection;
+//import com.rabbitmq.client.ConnectionFactory;
+
 public class ProblemSet {
 	public static final double LOC_X1_LOW = 0;
 	public static final double LOC_X1_HIGH = 1;
@@ -67,7 +71,7 @@ public class ProblemSet {
 		double x16 = location.getLoc()[15];
 		double x17 = location.getLoc()[16];
 		
-		result = Math.pow(x1,2)
+		/*result = Math.pow(x1,2)
 				+ Math.pow(x2,2)
 				+ Math.pow(x3,2)
 				+ Math.pow(x4,2)
@@ -84,6 +88,46 @@ public class ProblemSet {
 				+ Math.pow(x15,2)
 				+ Math.pow(x16,2)
 				+ Math.pow(x17,2);
-		return result;
+		return result;*/
+		
+		/*ConnectionFactory factory = new ConnectionFactory();
+        factory.setHost("192.168.99.100");
+        Connection connection = factory.newConnection();
+        Channel channel = connection.createChannel();
+
+        channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+        String message = "{\n" +
+                "    \"solutionCandidateId\": \"c93461cc-797d-48db-b966-57fe1fdb443a\",\n" +
+                "    \"solutionVector\": [\n" +
+                x1 +
+                x2 +
+                x3 +
+                x4 +
+                x5 +
+                x6 +
+                x7 +
+                x8 +
+                x9 +
+                x10 +
+                x11 +
+                x12 +
+                x13 +
+                x14 +
+                x15 +
+                x16 +
+                x17 +
+                "    ],\n" +
+                "    \"resultValue\": 0.0,\n" +
+                "    \"isFeasible\": false,\n" +
+                "    \"isEvaluated\": false\n" +
+                "}";
+        channel.basicPublish("", QUEUE_NAME, null, message.getBytes("UTF-8"));
+        System.out.println(" [x] Sent '" + message + "'");
+
+        channel.close();
+        connection.close();*/
+        
+        //result = ReceiveLogs.Receive();
+		return 0.0;
 	}
 }
