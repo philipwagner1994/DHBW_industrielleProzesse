@@ -3,43 +3,43 @@ import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
 public class ProblemSet {
-	public static final double LOC_X1_LOW = -5;
-	public static final double LOC_X1_HIGH = 5;
-	public static final double LOC_X2_LOW = -5;
-	public static final double LOC_X2_HIGH = 5;
-	public static final double LOC_X3_LOW = -5;
-	public static final double LOC_X3_HIGH = 5;
-	public static final double LOC_X4_LOW = -5;
-	public static final double LOC_X4_HIGH = 5;
-	public static final double LOC_X5_LOW = -5;
-	public static final double LOC_X5_HIGH = 5;
-	public static final double LOC_X6_LOW = -5;
-	public static final double LOC_X6_HIGH = 5;
-	public static final double LOC_X7_LOW = -5;
-	public static final double LOC_X7_HIGH = 5;
-	public static final double LOC_X8_LOW = -5;
-	public static final double LOC_X8_HIGH = 5;
-	public static final double LOC_X9_LOW = -5;
-	public static final double LOC_X9_HIGH = 5;
-	public static final double LOC_X10_LOW = -5;
-	public static final double LOC_X10_HIGH = 5;
-	public static final double LOC_X11_LOW = -5;
-	public static final double LOC_X11_HIGH = 5;
-	public static final double LOC_X12_LOW = -5;
-	public static final double LOC_X12_HIGH = 5;
-	public static final double LOC_X13_LOW = -5;
-	public static final double LOC_X13_HIGH = 5;
-	public static final double LOC_X14_LOW = -5;
-	public static final double LOC_X14_HIGH = 5;
-	public static final double LOC_X15_LOW = -5;
-	public static final double LOC_X15_HIGH = 5;
-	public static final double LOC_X16_LOW = -5;
-	public static final double LOC_X16_HIGH = 5;
-	public static final double LOC_X17_LOW = -5;
-	public static final double LOC_X17_HIGH = 5;
-	public static final double VEL_LOW = -0.001;
-	public static final double VEL_HIGH = 0.001;
-	public static final double ERR_TOLERANCE = 0.000000000000001;// 1E-15; // the smaller the tolerance, the more accurate the result,
+	public static final double LOC_X1_LOW = 0;
+	public static final double LOC_X1_HIGH = 3;
+	public static final double LOC_X2_LOW = 0;
+	public static final double LOC_X2_HIGH = 3;
+	public static final double LOC_X3_LOW = 0;
+	public static final double LOC_X3_HIGH = 3;
+	public static final double LOC_X4_LOW = 0;
+	public static final double LOC_X4_HIGH = 3;
+	public static final double LOC_X5_LOW = 0;
+	public static final double LOC_X5_HIGH = 3;
+	public static final double LOC_X6_LOW = 0;
+	public static final double LOC_X6_HIGH = 3;
+	public static final double LOC_X7_LOW = 0;
+	public static final double LOC_X7_HIGH = 3;
+	public static final double LOC_X8_LOW = 0;
+	public static final double LOC_X8_HIGH = 3;
+	public static final double LOC_X9_LOW = 0;
+	public static final double LOC_X9_HIGH = 3;
+	public static final double LOC_X10_LOW = 0;
+	public static final double LOC_X10_HIGH = 3;
+	public static final double LOC_X11_LOW = 0;
+	public static final double LOC_X11_HIGH = 3;
+	public static final double LOC_X12_LOW = 0;
+	public static final double LOC_X12_HIGH = 3;
+	public static final double LOC_X13_LOW = 0;
+	public static final double LOC_X13_HIGH = 3;
+	public static final double LOC_X14_LOW = 0;
+	public static final double LOC_X14_HIGH = 3;
+	public static final double LOC_X15_LOW = 0;
+	public static final double LOC_X15_HIGH = 3;
+	public static final double LOC_X16_LOW = 0;
+	public static final double LOC_X16_HIGH = 3;
+	public static final double LOC_X17_LOW = 0;
+	public static final double LOC_X17_HIGH = 3;
+	public static final double VEL_LOW = -0.1;
+	public static final double VEL_HIGH = 0.1;
+	public static final double ERR_TOLERANCE = 0.000000000000001;// 1E-20; // the smaller the tolerance, the more accurate the result,
 	// but the number of iteration is increased
 	private final static String QUEUE_NAME = "Inbound";
 
@@ -125,6 +125,33 @@ public class ProblemSet {
 				"    \"isFeasible\": false,\n" +
 				"    \"isEvaluated\": false\n" +
 				"}";
+		/*
+		 * String message = "{\n" +
+		 * "    \"solutionCandidateId\": \""+id+"\",\n" +
+		 * "    \"solutionVector\": [\n" +
+		 * "1.0830288" + ",\n" +
+		 * "1.7491628" + ",\n" +
+		 * "1.7572358" + ",\n" +
+		 * "0.3188138" + ",\n" +
+		 * "0.9775208" + ",\n" +
+		 * "2.4206598" + ",\n" +
+		 * "1.2199958" + ",\n" +
+		 * "1.1281228" + ",\n" +
+		 * "1.1173398" + ",\n" +
+		 * "1.3775948" + ",\n" +
+		 * "1.4371388" + ",\n" +
+		 * "1.3267328" + ",\n" +
+		 * "0.5371048" + ",\n" +
+		 * "1.4463308" + ",\n" +
+		 * "0.4292318" + ",\n" +
+		 * "1.3680858" + ",\n" +
+		 * "1.0799318" + "\n" +
+		 * "    ],\n" +
+		 * "    \"resultValue\": 0.0,\n" +
+		 * "    \"isFeasible\": false,\n" +
+		 * "    \"isEvaluated\": false\n" +
+		 * "}";
+		 */
 		// System.out.println("Send");
 
 		channel.basicPublish("", QUEUE_NAME, null, message.getBytes("UTF-8"));
