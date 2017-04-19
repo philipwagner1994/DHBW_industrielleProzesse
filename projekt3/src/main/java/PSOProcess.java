@@ -53,7 +53,6 @@ public class PSOProcess implements PSOConstants {
 				double messageValue =Double.parseDouble(message.split(":")[3].split(",")[0]);
 				String isFeasible = message.split(":")[4].split(",")[0];
 				if(isFeasible.equals("false")){ 
-					System.out.println("test");
 					messageValue=1000000;}
 				if(messageID.equals("global")){
 					lastval = err;
