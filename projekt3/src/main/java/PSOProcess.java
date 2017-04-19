@@ -51,6 +51,10 @@ public class PSOProcess implements PSOConstants {
 				System.out.println(" [x] Received '" + message + "'");
 				String messageID = message.split(":")[1].split(",")[0].split("\"")[1];
 				double messageValue =Double.parseDouble(message.split(":")[3].split(",")[0]);
+				String isFeasible = message.split(":")[4].split(",")[0];
+				if(isFeasible.equals("false")){ 
+					System.out.println("test");
+					messageValue=1000000;}
 				if(messageID.equals("global")){
 					lastval = err;
                     err = messageValue - 0; // minimizing the functions means it's getting closer to 0
@@ -75,7 +79,7 @@ public class PSOProcess implements PSOConstants {
 				//System.out.println(err);
 				//System.out.println(t);
 				//System.out.println(ProblemSet.ERR_TOLERANCE);
-                if(t >= MAX_ITERATION || Math.abs(err-lastval) <= ProblemSet.ERR_TOLERANCE){ //|| Math.abs(err-lastval) <= ProblemSet.ERR_TOLERANCE
+                if(t >= MAX_ITERATION || Math.abs(err-lastval) <= ProblemSet.ERR_TOLERANCE && err<1000000){ //|| Math.abs(err-lastval) <= ProblemSet.ERR_TOLERANCE
 				    try {
                         System.out.println("\nSolution found at iteration " + (t - 1) + ", the solutions is:");
                         for (int j = 0; j < PROBLEM_DIMENSION; j++) {

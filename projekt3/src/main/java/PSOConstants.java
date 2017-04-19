@@ -1,6 +1,6 @@
 public interface PSOConstants {
-	int SWARM_SIZE = 1000;
-	int MAX_ITERATION = 50;
+	int SWARM_SIZE = 100;
+	int MAX_ITERATION = 100;
 	int PROBLEM_DIMENSION = 17;
 	double C1 = 1.0;
 	double C2 = 1.0;
@@ -19,6 +19,6 @@ public interface PSOConstants {
 	double C15 = 2.0;
 	double C16 = 2.0;
 	double C17 = 2.0;*/
-	double W_UPPERBOUND = 0.35;
+	double W_UPPERBOUND = 0.4;
 	double W_LOWERBOUND = 0;
 }
