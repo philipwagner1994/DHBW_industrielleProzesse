@@ -1,4 +1,4 @@
-# DHBW_industrielleProzesse
+﻿# DHBW_industrielleProzesse
 
 ## Particle Swarm Optimization (PSO)
 Der Particle Swarm Optimization Algorithmus nimmt seine Inspiration aus dem Tierreich und versucht die auftretenden Anforderungen analog zu diesem zu lösen. Der PSO orientiert sich bei seinem Verhalten an Insekten die in Schwärmen auftreten, wie etwa Bienen. Wenn diese auf der Suche nach guten Futterplätzen sind und in einem großen Gebiet nach den optimalen Plätzen suchen, stehen sie vor einem Optimierungsproblem, dass sie lösen müssen.
@@ -30,3 +30,6 @@ Am schwierigsten war es dabei die Rastrigin function zu optimieren, da der Algor
 Ein großer Vorteil des PSO ist die Geschwindigkeit mit der er ein möglichst optimales Ergebnis findet. 
 In den meisten Fällen reichten weniger als 100 Iterationen um ein gutes Ergebnis zu finden. Aufbauend auf diesem Ergebnis kann der Wertebereich sowie die Geschwindigkeit der Partikel eingrenzt werden, um dem absoluten Optimum noch näher zu kommen.
 Die Implementierung des Algorithmus ist für alle vier Testfunktion, mit den entsprechend optimalsten Einstellungen, in den Ordnern Projekt1 bis Projekt4 untergebracht.
+## Startanleitung
+-	Projekt in Eclipse kopieren
+-	Klasse PSODriver ausführen
